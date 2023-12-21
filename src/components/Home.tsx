@@ -85,7 +85,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <s.Main>
       <s.InputWrapper editable={!alarmStatus && !timeToAlarm}>
         <s.HourInput value={hour} onChange={handleHourChange} />
         <s.MinuteInput value={minute} onChange={handleMinuteChange} />
@@ -110,7 +110,7 @@ const Home = () => {
         브라우저가 오디오를 지원하지 않습니다.
       </audio>
       <div>현재 시간: {currentTime.toLocaleTimeString()}</div>
-    </>
+    </s.Main>
   );
 };
 

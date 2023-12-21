@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 
 export const Global = createGlobalStyle`
   * {
@@ -18,6 +18,8 @@ export const Global = createGlobalStyle`
 
   body {
     margin: 0;
+    padding: 12px;
+    touch-action: pan-x pan-y;
   }
 
   body, button, input, textarea{
@@ -59,6 +61,3 @@ export const Global = createGlobalStyle`
     border-left: 3px solid transparent;
   }
 `;
-
-export const Header = styled.header``;
-export const Main = styled.main``;

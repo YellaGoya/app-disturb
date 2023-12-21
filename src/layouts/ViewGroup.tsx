@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react';
-import { Header, Main } from '@/Global';
+import Header from '@/components/Header.tsx';
 
 interface ViewGroupProps {
   readonly children: ReactNode;
@@ -8,8 +8,8 @@ interface ViewGroupProps {
 const ViewGroup: FC<ViewGroupProps> = ({ children }) => {
   return (
     <>
-      <Header>header</Header>
-      <Main>{children}</Main>
+      <Header />
+      {children}
     </>
   );
 };

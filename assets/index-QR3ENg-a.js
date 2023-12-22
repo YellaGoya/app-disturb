@@ -153,12 +153,13 @@ Error generating stack: `+o.message+`
     border-left: 3px solid transparent;
   }
 `,A0=ln.header`
+  padding-top: 30px;
   color: #323232;
   font-size: 1.2rem;
   font-weight: 600;
 `,U0=()=>H.jsxs(A0,{children:["Earphone alarm,",H.jsx("br",{}),"please Disturb."]}),B0=({children:e})=>H.jsxs(H.Fragment,{children:[H.jsx(U0,{}),e]}),V0="/app-disturb/assets/alarm-ylDz5WbC.mp3",W0="/app-disturb/assets/dnms-V2DD40Hv.mp3",H0="/app-disturb/assets/speaker-w3DP8Uef.png",Q0=ln.main`
   position: relative;
-  height: calc(100% - 46px);
+  height: calc(100% - 76px);
 
   & > button {
     position: relative;
@@ -216,7 +217,7 @@ Error generating stack: `+o.message+`
   }
 `,G0=ln.img`
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 0;
 
   width: 100%;

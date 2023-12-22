@@ -153,11 +153,29 @@ Error generating stack: `+o.message+`
     border-left: 3px solid transparent;
   }
 `,A0=ln.header`
+  color: #323232;
   font-size: 1.2rem;
   font-weight: 600;
-`,U0=()=>A.jsxs(A0,{children:["Earphone alarm,",A.jsx("br",{}),"please Disturb."]}),B0=({children:e})=>A.jsxs(A.Fragment,{children:[A.jsx(U0,{}),e]}),V0="/app-disturb/assets/alarm-ylDz5WbC.mp3",W0="/app-disturb/assets/keep-jKstcVJr.mp3",H0="/app-disturb/assets/speaker-w3DP8Uef.png",Q0=ln.main`
+`,U0=()=>A.jsxs(A0,{children:["Earphone alarm,",A.jsx("br",{}),"please Disturb."]}),B0=({children:e})=>A.jsxs(A.Fragment,{children:[A.jsx(U0,{}),e]}),V0="/app-disturb/assets/alarm-ylDz5WbC.mp3",W0="/app-disturb/assets/dnms-V2DD40Hv.mp3",H0="/app-disturb/assets/speaker-w3DP8Uef.png",Q0=ln.main`
   position: relative;
   height: calc(100% - 46px);
+
+  & > button {
+    position: relative;
+    display: block;
+    margin: 5px auto;
+
+    color: #323232;
+    font-size: 1.4rem;
+    font-family: 'pv';
+    font-weight: 600;
+
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+    cursor: pointer;
+  }
 `,K0=ln.div`
   position: relative;
   display: flex;
@@ -166,9 +184,12 @@ Error generating stack: `+o.message+`
   padding-top: 160px;
 
   pointer-events: ${e=>e.editable?"auto":"none"};
-  opacity: ${e=>e.editable?"1":"0.5"};
+  opacity: ${e=>e.editable?"1":"0.6"};
+
+  transition: opacity 0.2s ease;
 
   & > * {
+    color: #323232;
     font-size: 1.4rem;
     font-family: 'pv';
     font-weight: 600;
@@ -180,10 +201,11 @@ Error generating stack: `+o.message+`
   }
 
   & > input {
-    width: 1.78rem;
+    width: 2rem;
     border: none;
 
     outline: none;
+    text-align: center;
 
     transition: color 0.2s ease;
     background-color: transparent;
@@ -199,4 +221,4 @@ Error generating stack: `+o.message+`
 
   width: 100%;
   opacity: 0.8;
-`,Y0=ln.input``,X0=ln.input``,Z0=()=>{const e=R.useRef(null),t=R.useRef(null),[n,r]=R.useState(!1),[l,o]=R.useState(new Date),[i,u]=R.useState("0"),[s,c]=R.useState("0"),[p,h]=R.useState(!1);R.useEffect(()=>{const a=new Date;u(a.getHours().toString().padStart(2,"0")),c(a.getMinutes().toString().padStart(2,"0"))},[]),R.useEffect(()=>{var E,x;(E=e.current)==null||E.addEventListener("pause",()=>{r(!1)}),(x=e.current)==null||x.addEventListener("play",()=>{r(l)});const a=n?n.getHours():null,f=n?n.getMinutes():null,v=setInterval(()=>{var N,M;const S=new Date;n&&S.getHours()===a&&S.getMinutes()===f&&((N=e.current)==null||N.pause(),e.current&&(e.current.currentTime=0),(M=t.current)==null||M.play(),h(!0),r(!1))},1e3);return()=>{clearInterval(v)}},[n,l]);const m=()=>{var a,f;if(n)r(!1),(a=e.current)==null||a.pause(),e.current&&(e.current.currentTime=0);else{const v=new Date;v.setHours(Number(i)),v.setMinutes(Number(s)),r(v),o(v),(f=e.current)==null||f.play()}},g=()=>{var a;(a=t.current)==null||a.pause(),t.current&&(t.current.currentTime=0),h(!1)},y=a=>{if(Number(a.target.value)){const{value:f}=a.target;if(Number(i)>9){u(f.slice(-1).padStart(2,"0"));return}if(Number(i)<2){u(f.slice(1).padStart(2,"0"));return}if(Number(i)===2){if(Number(f.slice(-1))>3){u(f.slice(-1).padStart(2,"0"));return}u(f.slice(1).padStart(2,"0"));return}u(f.slice(-1).padStart(2,"0"))}a.target.value==="0"&&u("00")},w=a=>{if(Number(a.target.value)){const{value:f}=a.target;if(Number(s)>9){c(f.slice(-1).padStart(2,"0"));return}if(Number(s)<6){c(f.slice(1).padStart(2,"0"));return}c(f.slice(-1).padStart(2,"0"))}a.target.value==="0"&&c("00")},P=a=>{a.setSelectionRange(2,2)},d=a=>{a.keyCode>36&&a.keyCode<41&&a.preventDefault()};return A.jsxs(Q0,{children:[A.jsxs(K0,{editable:!p&&!n,children:[A.jsx(Y0,{value:i,onChange:y,onClick:a=>{P(a.target)},onKeyDown:a=>{d(a)}}),A.jsx("p",{children:":"}),A.jsx(X0,{value:s,onChange:w,onClick:a=>{P(a.target)},onKeyDown:a=>{d(a)}})]}),p?A.jsx("button",{type:"button",onClick:g,children:"알람 제거"}):A.jsx("button",{type:"button",onClick:m,children:n?"알람 해제":"알람 설정"}),A.jsxs("audio",{ref:e,controls:!0,loop:!0,style:{visibility:"hidden"},children:[A.jsx("source",{src:W0}),"브라우저가 오디오를 지원하지 않습니다."]}),A.jsxs("audio",{ref:t,controls:!0,loop:!0,style:{visibility:"hidden"},children:[A.jsx("source",{src:V0}),"브라우저가 오디오를 지원하지 않습니다."]}),A.jsx(G0,{src:H0,alt:"speaker"})]})},J0=()=>km([{path:"/app-disturb",element:A.jsx(Z0,{})}]),q0=()=>A.jsxs(A.Fragment,{children:[A.jsx(F0,{}),A.jsx(Om,{children:A.jsx(B0,{children:A.jsx(J0,{})})})]});bo.createRoot(document.getElementById("root")).render(A.jsx(Ve.StrictMode,{children:A.jsx(q0,{})}));
+`,Y0=ln.input``,X0=ln.input``,Z0=()=>{const e=R.useRef(null),t=R.useRef(null),[n,r]=R.useState(!1),[l,o]=R.useState(new Date),[i,u]=R.useState("0"),[s,c]=R.useState("0"),[p,h]=R.useState(!1);R.useEffect(()=>{const a=new Date;u(a.getHours().toString().padStart(2,"0")),c(a.getMinutes().toString().padStart(2,"0"))},[]),R.useEffect(()=>{var E,x;(E=e.current)==null||E.addEventListener("pause",()=>{r(!1)}),(x=e.current)==null||x.addEventListener("play",()=>{r(l)}),console.log("hey");const a=n?n.getHours():null,f=n?n.getMinutes():null,v=setInterval(()=>{var N,M;const S=new Date;console.log(S),n&&S.getHours()===a&&S.getMinutes()===f&&((N=e.current)==null||N.pause(),e.current&&(e.current.currentTime=0),(M=t.current)==null||M.play(),h(!0),r(!1))},1e3);return()=>{clearInterval(v)}},[n,l]);const m=()=>{var a,f;if(n)r(!1),(a=e.current)==null||a.pause(),e.current&&(e.current.currentTime=0);else{const v=new Date;v.setHours(Number(i)),v.setMinutes(Number(s)),r(v),o(v),(f=e.current)==null||f.play()}},g=()=>{var a;(a=t.current)==null||a.pause(),t.current&&(t.current.currentTime=0),h(!1)},y=a=>{if(Number(a.target.value)){const{value:f}=a.target;if(Number(i)>9){u(f.slice(-1).padStart(2,"0"));return}if(Number(i)<2){u(f.slice(1).padStart(2,"0"));return}if(Number(i)===2){if(Number(f.slice(-1))>3){u(f.slice(-1).padStart(2,"0"));return}u(f.slice(1).padStart(2,"0"));return}u(f.slice(-1).padStart(2,"0"))}a.target.value==="0"&&u("00")},w=a=>{if(Number(a.target.value)){const{value:f}=a.target;if(Number(s)>9){c(f.slice(-1).padStart(2,"0"));return}if(Number(s)<6){c(f.slice(1).padStart(2,"0"));return}c(f.slice(-1).padStart(2,"0"))}a.target.value==="0"&&c("00")},P=a=>{a.setSelectionRange(2,2)},d=a=>{a.keyCode>36&&a.keyCode<41&&a.preventDefault()};return A.jsxs(Q0,{children:[A.jsxs(K0,{editable:!p&&!n,children:[A.jsx(Y0,{value:i,onChange:y,onClick:a=>{P(a.target)},onKeyDown:a=>{d(a)}}),A.jsx("p",{children:":"}),A.jsx(X0,{value:s,onChange:w,onClick:a=>{P(a.target)},onKeyDown:a=>{d(a)}})]}),p?A.jsx("button",{type:"button",onClick:g,children:"Turn off"}):A.jsx("button",{type:"button",onClick:m,children:n?"Unset alarm":"Set alarm"}),A.jsxs("audio",{ref:e,controls:!0,loop:!0,style:{visibility:"hidden"},children:[A.jsx("source",{src:W0}),"브라우저가 오디오를 지원하지 않습니다."]}),A.jsxs("audio",{ref:t,controls:!0,loop:!0,style:{visibility:"hidden"},children:[A.jsx("source",{src:V0}),"브라우저가 오디오를 지원하지 않습니다."]}),A.jsx(G0,{src:H0,alt:"speaker"})]})},J0=()=>km([{path:"/app-disturb",element:A.jsx(Z0,{})}]),q0=()=>A.jsxs(A.Fragment,{children:[A.jsx(F0,{}),A.jsx(Om,{children:A.jsx(B0,{children:A.jsx(J0,{})})})]});bo.createRoot(document.getElementById("root")).render(A.jsx(Ve.StrictMode,{children:A.jsx(q0,{})}));

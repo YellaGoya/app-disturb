@@ -1,7 +1,14 @@
 import { createGlobalStyle } from 'styled-components';
+import pv from '@/assets/pv.woff2';
 // import styled from 'styled-components';
 
 export const Global = createGlobalStyle`
+  @font-face {
+    font-family: "pv";
+    src: url(${pv}) format("woff2");
+    font-display: block;
+  }
+
   * {
     box-sizing: border-box;
     color: var(--font-rev);
@@ -10,16 +17,36 @@ export const Global = createGlobalStyle`
       background: var(--selection-bg);
       color: var(--selection-font);
     }
+
+    font-family: "pv";
   }
 
   html {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-size: 16px;
+
+    background-color: #fbfbfb;
   }
 
   body {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    max-height: 1104px;
+    height: 100%;
+
     margin: 0;
     padding: 12px;
     touch-action: pan-x pan-y;
+
+    & > #root {
+      height: 100%;
+    }
   }
 
   body, button, input, textarea{
